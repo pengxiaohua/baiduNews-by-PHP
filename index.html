@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<title>百度新闻</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+	<div class="container">
+		<header class="cf">
+			<a href="#" class="logo"><span class="iconfont">&#xe7df;</span></a>
+			<a href="admin.html" target="blank" class="user"><span class="iconfont">&#xe647;</span></a>
+			<a href="#" class="plus"><span class="iconfont">&#xe62a;</span></a>			
+			<a href="#" class="search"><span class="iconfont">&#xe606;</span></a>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#" class="currentNews">精选</a><i></i></li>
+				<li><a href="#">百家</a><i></i></li>
+				<li><a href="#">本地</a><i></i></li>
+				<li><a href="#">图片</a><i></i></li>
+				<li><a href="#">娱乐</a><i></i></li>
+				<li><a href="#">社会</a><i></i></li>
+				<li><a href="#">军事</a><i></i></li>
+				<li><a href="#">女人</a><i></i></li>
+				<li><a href="#">搞笑</a><i></i></li>
+				<li><a href="#">互联网</a><i></i></li>
+				<li><a href="#">更多</a><i></i></li>
+			</ul>
+		</nav>
+		<article class="newsMain">
+			<ul class="newsLists">
+				<!--这里自动添加新闻-->
+
+				<!--<li class="newsList">
+					<div class="newsImg">
+						<img src="img/001.jpg" alt="" width="100%">
+					</div>
+					<div class="newsContent">
+						<h1>习近平主持中央财经领导会议</h1>
+						<p>
+							<span class="newsTime">2016年12月21日</span>
+							<span class="newsSrc">人民日报</span>
+						</p>
+					</div>
+				</li>-->
+			</ul>
+		</article>
+	</div>
+
+	<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			var deviceWidth = $('body').width();
+			$('nav li').each(function(index,item){
+				if($(this).find('a').html().split('').length > 2){ //判断nav标题文字个数分配宽度，split拆分
+					$(this).width(deviceWidth/3);
+				}else{
+					$(this).width(deviceWidth/6);
+				}
+			})
+		})
+	</script>
+	<script src="js/news.js"></script>
+</body>
+</html>
